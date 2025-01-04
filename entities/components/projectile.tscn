@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://chun61taa4xnw"]
+
+[ext_resource type="Script" path="res://entities/components/projectile.gd" id="1_toigj"]
+[ext_resource type="Texture2D" uid="uid://nupoo5ssjmn4" path="res://icon.svg" id="2_w7xhf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6udg3"]
+
+[node name="projectile" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_toigj")
+
+[node name="area_2d" type="Area2D" parent="."]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="area_2d"]
+shape = SubResource("CircleShape2D_6udg3")
+
+[node name="icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_w7xhf")
+
+[connection signal="body_entered" from="area_2d" to="." method="_on_area_2d_body_entered"]

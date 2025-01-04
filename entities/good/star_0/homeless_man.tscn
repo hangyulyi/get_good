@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://di05sbg76kyrp"]
+
+[ext_resource type="Script" path="res://entities/good/star_0/homeless_man.gd" id="1_ba0g1"]
+[ext_resource type="Texture2D" uid="uid://nupoo5ssjmn4" path="res://icon.svg" id="2_od3n5"]
+
+[node name="HomelessMan" type="CharacterBody2D" groups=["Unit"]]
+position = Vector2(248, 256)
+script = ExtResource("1_ba0g1")
+
+[node name="vision_area" type="Area2D" parent="."]
+
+[node name="icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_od3n5")
